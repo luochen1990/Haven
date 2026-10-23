@@ -11,10 +11,13 @@ android {
 
     defaultConfig {
         applicationId = "sh.haven.app"
+        // dogfood-only: coexist with the official f-droid.org build (different
+        // signature cannot overlay-install). Local commit, NEVER pushed.
+        applicationIdSuffix = ".dogfood"
         minSdk = 26
         targetSdk = 35
         versionCode = 901
-        versionName = "5.89.50"
+        versionName = "5.89.50-hwkey.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
